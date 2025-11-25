@@ -1,0 +1,24 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Purple Heart Background -->
+  <circle cx="100" cy="100" r="90" fill="#5c2d91"/>
+
+  <!-- Heart Shape -->
+  <path d="M100 150C100 150 60 120 60 95C60 80 70 70 82.5 70C90 70 95 75 100 82.5C105 75 110 70 117.5 70C130 70 140 80 140 95C140 120 100 150 100 150Z" fill="#ffd93d"/>
+
+  <!-- Computer Monitor -->
+  <rect x="75" y="85" width="50" height="35" rx="3" fill="white"/>
+  <rect x="78" y="88" width="44" height="26" fill="#5c2d91"/>
+
+  <!-- Terminal Prompt -->
+  <text x="82" y="105" font-family="monospace" font-size="12" fill="#ffd93d">💜❯</text>
+
+  <!-- Monitor Stand -->
+  <rect x="95" y="120" width="10" height="8" fill="white"/>
+  <rect x="85" y="128" width="30" height="3" rx="1.5" fill="white"/>
+
+  <!-- Sparkles -->
+  <circle cx="65" cy="60" r="3" fill="#6dd5ed"/>
+  <circle cx="135" cy="60" r="3" fill="#6dd5ed"/>
+  <circle cx="50" cy="100" r="2" fill="#ffd93d"/>
+  <circle cx="150" cy="100" r="2" fill="#ffd93d"/>
+</svg>
