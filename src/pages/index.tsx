@@ -1,48 +1,42 @@
 import Head from 'next/head';
 import Hero from '@/components/Hero';
-import AboutSection from '@/components/AboutSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import OpenSourceSection from '@/components/OpenSourceSection';
-import CTASection from '@/components/CTASection';
+import VideoSection from '@/components/VideoSection';
+import ProblemSolution from '@/components/ProblemSolution';
+import HowItWorks from '@/components/HowItWorks';
+import Features from '@/components/Features';
+import Sustainability from '@/components/Sustainability';
+import Story from '@/components/Story';
+import PreorderCTA from '@/components/PreorderCTA';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Purple Computer - A joyful creativity computer for kids</title>
+        <title>Purple Computer - A calm creativity computer for kids</title>
         <meta
           name="description"
-          content="Purple Computer: A joyful, kid-safe creativity computer built from your old laptop. Turn any computer into a magical terminal for young children."
+          content="Transform your old laptop into a calm, distraction-free creativity computer for kids ages 3-8. No internet, no ads, no apps to manage."
         />
-        <meta
-          name="keywords"
-          content="purple computer, kids computer, children's computer, educational technology, kid-safe computing, open source, Linux for kids"
-        />
-        <meta property="og:title" content="Purple Computer - A joyful creativity computer for kids" />
+        <meta property="og:title" content="Purple Computer" />
         <meta
           property="og:description"
-          content="Turn any old laptop into a magical, kid-safe creativity machine"
+          content="A calm creativity computer they can call their own"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://purplecomputer.org" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Purple Computer" />
-        <meta
-          name="twitter:description"
-          content="A joyful, kid-safe creativity computer for young children"
-        />
         <link rel="icon" href="/logo.svg" />
       </Head>
 
-      <main>
+      <main className="bg-white">
         <Hero />
-        <AboutSection />
-        <FeaturesSection />
-        <HowItWorksSection />
-        <OpenSourceSection />
-        <CTASection />
+        <VideoSection />
+        <ProblemSolution />
+        <HowItWorks />
+        <Features />
+        <Sustainability />
+        <Story />
+        <PreorderCTA />
         <Footer />
       </main>
     </>

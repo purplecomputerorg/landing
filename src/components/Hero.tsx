@@ -1,67 +1,46 @@
-import React from 'react';
-import TerminalDemo from './TerminalDemo';
-import ComputerFrame from './ComputerFrame';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-purple">
-      {/* Background Decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-yellow-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-sky/10 rounded-full blur-3xl"></div>
-      </div>
+    <section className="min-h-screen flex flex-col bg-gradient-to-b from-purple-50 via-white to-white">
+      {/* Header */}
+      <header className="py-6 px-6 sm:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto flex items-center gap-3">
+          <Image
+            src="/bot-2-purple.svg"
+            alt="Purple Computer"
+            width={36}
+            height={36}
+          />
+          <span className="text-purple-primary font-display font-bold text-lg tracking-tight">
+            Purple Computer
+          </span>
+        </div>
+      </header>
 
-      <div className="section-container py-20 relative z-10">
-        <div className="text-center mb-12 animate-slide-up">
-          {/* Logo/Badge */}
-          <div className="inline-block mb-6">
-            <div className="text-7xl mb-4">💜</div>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-white mb-6">
-            Meet Purple Computer
+      {/* Hero Content */}
+      <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pb-20">
+        <div className="max-w-4xl text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tight">
+            A calm creativity computer{' '}
+            <span className="text-purple-primary">they can call their own</span>
           </h1>
 
-          {/* Subheading */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto mb-4 font-light">
-            A joyful, kid-safe creativity computer built from your old laptop
+          <p className="text-xl sm:text-2xl text-gray-500 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Transform your old laptop into a distraction-free space for kids to explore, create, and play.
           </p>
 
-          <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-8">
-            Turn any computer into a magical terminal where little ones can explore, create, and play
-          </p>
-
-          {/* Quick CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#try-demo"
-              className="px-8 py-4 bg-yellow-accent text-purple-dark rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg"
+              href="#preorder"
+              className="group px-8 py-4 bg-purple-primary text-white rounded-full font-semibold text-lg hover:bg-purple-dark transition-all hover:shadow-lg hover:shadow-purple-primary/25"
             >
-              Try the Demo Below
+              Pre-order for $50
             </a>
-            <a
-              href="https://github.com/purplecomputerorg/purplecomputer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/20 backdrop-blur text-white rounded-full font-semibold text-lg hover:bg-white/30 transition-all shadow-lg"
-            >
-              View on GitHub
-            </a>
+            <span className="text-gray-400">
+              <s className="text-gray-300">$80</s> early pricing
+            </span>
           </div>
-        </div>
-
-        {/* Interactive Terminal Demo */}
-        <div id="try-demo" className="scroll-mt-20 animate-fade-in">
-          <ComputerFrame>
-            <TerminalDemo />
-          </ComputerFrame>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="text-center mt-16 animate-bounce">
-          <div className="text-white/60 text-sm mb-2">Scroll to learn more</div>
-          <div className="text-white/60 text-2xl">↓</div>
         </div>
       </div>
     </section>

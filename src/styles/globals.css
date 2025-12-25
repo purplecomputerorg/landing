@@ -2,42 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
 
 @layer base {
-  :root {
-    --purple-primary: #5c2d91;
-    --purple-dark: #3d1d5f;
-    --purple-light: #7a4db8;
-    --yellow-accent: #ffd93d;
-    --blue-sky: #6dd5ed;
-  }
-
   body {
-    @apply bg-white text-gray-900 font-sans;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-white text-gray-900 font-sans antialiased;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-}
-
-@layer components {
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .gradient-purple {
-    background: linear-gradient(135deg, #5c2d91 0%, #7a4db8 100%);
-  }
-
-  .gradient-rainbow {
-    background: linear-gradient(90deg, #5c2d91, #6dd5ed, #ffd93d);
-  }
-
-  .terminal-text {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
-    @apply text-xl sm:text-2xl md:text-3xl;
   }
 }

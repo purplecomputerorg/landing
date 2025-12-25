@@ -1,0 +1,22 @@
+export default function VideoSection() {
+  return (
+    <section className="py-20 px-6 sm:px-8 lg:px-12">
+      <div className="max-w-4xl mx-auto">
+        <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-50 rounded-3xl flex items-center justify-center shadow-sm">
+          <div className="text-center">
+            <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center mx-auto mb-4">
+              <svg
+                className="w-8 h-8 text-purple-primary ml-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <p className="text-purple-primary/60 font-medium">Video coming soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
