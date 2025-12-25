@@ -10,7 +10,7 @@ export default function Header() {
             alt="Purple Computer"
             width={44}
             height={44}
-            className="flex-shrink-0"
+            className="flex-shrink-0 -translate-y-[3px]"
           />
           <span className="text-purple-primary font-display font-bold text-xl">
             Purple Computer
