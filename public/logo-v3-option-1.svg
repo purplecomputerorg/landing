@@ -1,0 +1,17 @@
+<!-- V3 Option 1: Clean Terminal - Perfectly centered, balanced terminal -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" rx="50" fill="#5c2d91"/>
+
+  <!-- Terminal window - centered -->
+  <rect x="40" y="60" width="120" height="80" rx="8" fill="#2d1b4e"/>
+
+  <!-- Window chrome -->
+  <circle cx="54" cy="74" r="3.5" fill="#ff5f56"/>
+  <circle cx="65" cy="74" r="3.5" fill="#ffbd2e"/>
+  <circle cx="76" cy="74" r="3.5" fill="#27c93f"/>
+
+  <!-- Terminal prompt - centered and clean -->
+  <text x="50" y="108" font-family="monospace" font-size="20" font-weight="bold" fill="#6dd5ed">❯</text>
+  <rect x="64" y="94" width="8" height="16" fill="#ffd93d"/>
+</svg>

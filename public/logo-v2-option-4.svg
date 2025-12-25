@@ -1,0 +1,18 @@
+<!-- V2 Option 4: PC Terminal Badge - Clean PC with terminal elements -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#5c2d91"/>
+  <circle cx="100" cy="100" r="78" fill="#2d1b4e"/>
+
+  <!-- Large P -->
+  <path d="M 50 65 L 65 65 L 65 135 L 50 135 Z M 65 65 L 85 65 C 95 65 102 72 102 82 C 102 92 95 99 85 99 L 65 99 Z" fill="#ffd93d"/>
+
+  <!-- Large C -->
+  <path d="M 150 100 C 150 80 135 65 115 65 L 115 78 C 128 78 137 87 137 100 C 137 113 128 122 115 122 L 115 135 C 135 135 150 120 150 100 Z" fill="#6dd5ed"/>
+
+  <!-- Terminal prompt between letters -->
+  <text x="90" y="105" font-family="monospace" font-size="22" fill="#ffd93d">❯</text>
+
+  <!-- Cursor -->
+  <rect x="108" y="93" width="6" height="16" fill="#ffd93d"/>
+</svg>

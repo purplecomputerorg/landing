@@ -1,0 +1,16 @@
+<!-- V3 Option 2: Refined PC Monogram - Clean, balanced typography -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="90" fill="#5c2d91"/>
+
+  <!-- P - clean and centered -->
+  <path d="M 60 70 L 60 130 M 60 70 L 90 70 C 100 70 106 76 106 86 C 106 96 100 102 90 102 L 60 102"
+        stroke="#ffd93d" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- C - clean and centered -->
+  <path d="M 144 84 C 140 76 132 70 122 70 C 108 70 98 82 98 100 C 98 118 108 130 122 130 C 132 130 140 124 144 116"
+        stroke="#6dd5ed" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+  <!-- Terminal cursor accent -->
+  <rect x="108" y="94" width="6" height="12" fill="#ffd93d" rx="1"/>
+</svg>

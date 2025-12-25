@@ -1,0 +1,21 @@
+<!-- V2 Option 1: Terminal Window - Simple terminal with colorful prompt -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" rx="45" fill="#5c2d91"/>
+
+  <!-- Terminal window -->
+  <rect x="30" y="50" width="140" height="100" rx="12" fill="#2d1b4e"/>
+
+  <!-- Window chrome dots -->
+  <circle cx="45" cy="65" r="4" fill="#ff5f56"/>
+  <circle cx="58" cy="65" r="4" fill="#ffbd2e"/>
+  <circle cx="71" cy="65" r="4" fill="#27c93f"/>
+
+  <!-- Terminal prompt -->
+  <text x="40" y="100" font-family="monospace" font-size="24" font-weight="bold" fill="#ffd93d">💜</text>
+  <text x="62" y="100" font-family="monospace" font-size="24" font-weight="bold" fill="#6dd5ed">❯</text>
+  <rect x="80" y="87" width="12" height="18" fill="#ffd93d"/>
+
+  <!-- PC text subtle -->
+  <text x="40" y="128" font-family="monospace" font-size="18" fill="#6dd5ed" opacity="0.6">pc</text>
+</svg>

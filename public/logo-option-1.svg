@@ -1,0 +1,17 @@
+<!-- Option 1: Heart Terminal - Simple purple heart with terminal prompt -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#5c2d91"/>
+
+  <!-- Heart shape -->
+  <path d="M100 145L100 145C100 145 65 120 65 95C65 82 73 72 85 72C92 72 97 76 100 82C103 76 108 72 115 72C127 72 135 82 135 95C135 120 100 145 100 145Z" fill="#ffd93d"/>
+
+  <!-- Terminal prompt overlay -->
+  <text x="88" y="108" font-family="monospace" font-size="24" font-weight="bold" fill="#5c2d91">❯</text>
+
+  <!-- Sparkles -->
+  <circle cx="60" cy="60" r="4" fill="#6dd5ed"/>
+  <circle cx="140" cy="60" r="4" fill="#6dd5ed"/>
+  <circle cx="50" cy="140" r="3" fill="#ffd93d" opacity="0.7"/>
+  <circle cx="150" cy="140" r="3" fill="#ffd93d" opacity="0.7"/>
+</svg>

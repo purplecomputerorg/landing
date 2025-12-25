@@ -1,0 +1,24 @@
+<!-- V2 Option 5: Laptop Simple - Clean minimal laptop shape -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" rx="40" fill="#5c2d91"/>
+
+  <!-- Laptop screen -->
+  <rect x="45" y="50" width="110" height="75" rx="8" fill="#ffd93d"/>
+
+  <!-- Screen display -->
+  <rect x="52" y="57" width="96" height="61" rx="4" fill="#2d1b4e"/>
+
+  <!-- Terminal content -->
+  <text x="62" y="85" font-family="monospace" font-size="18" fill="#6dd5ed">❯ pc</text>
+  <rect x="95" y="73" width="6" height="14" fill="#ffd93d"/>
+
+  <!-- Simple emoji output -->
+  <text x="62" y="105" font-size="20">💜</text>
+
+  <!-- Laptop base -->
+  <path d="M 35 125 L 45 125 L 52 135 L 148 135 L 155 125 L 165 125 L 170 145 L 30 145 Z" fill="#ffd93d"/>
+
+  <!-- Trackpad -->
+  <rect x="85" y="130" width="30" height="8" rx="2" fill="#2d1b4e" opacity="0.3"/>
+</svg>
