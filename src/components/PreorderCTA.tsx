@@ -1,6 +1,6 @@
 export default function PreorderCTA() {
   return (
-    <section id="preorder" className="py-24 px-6 sm:px-8 lg:px-12 scroll-mt-8 bg-gradient-to-b from-purple-50 to-white">
+    <section id="preorder" className="py-24 px-6 sm:px-8 lg:px-12 scroll-mt-16 bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-4 tracking-tight">
           Pre-order Purple Computer
@@ -12,10 +12,9 @@ export default function PreorderCTA() {
 
         <div className="bg-gradient-to-br from-purple-primary to-purple-dark text-white rounded-3xl p-10 sm:p-12 mb-8 shadow-xl shadow-purple-primary/20">
           <div className="text-6xl font-display font-extrabold mb-2">$50</div>
-          <div className="text-purple-200 mb-8">
-            <span className="line-through opacity-60">$80</span>{' '}
-            <span className="text-white font-medium">pre-order pricing</span>
-          </div>
+          <p className="text-purple-200 mb-8">
+            $80 after launch
+          </p>
 
           <a
             href="#preorder"

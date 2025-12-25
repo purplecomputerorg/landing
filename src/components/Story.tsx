@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <section className="py-24 px-6 sm:px-8 lg:px-12 bg-purple-50">
+    <section id="story" className="py-24 px-6 sm:px-8 lg:px-12 bg-purple-50 scroll-mt-16">
       <div className="max-w-3xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           Our story
@@ -28,10 +28,29 @@ export default function Story() {
           </p>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-purple-200">
-          <p className="text-gray-500 text-center">
-            Built by <span className="text-gray-700 font-medium">Tavi Nathanson</span>
+        <div className="mt-16 pt-10 border-t border-purple-200">
+          <p className="text-purple-primary font-semibold mb-6 tracking-wide uppercase text-sm">
+            Team
           </p>
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
+              T
+            </div>
+            <div>
+              <h3 className="font-display font-bold text-gray-900 text-lg">Tavi Nathanson</h3>
+              <p className="text-gray-500 mt-1">
+                Software engineer and father of two. Building Purple because his kids deserve better than tablets.
+              </p>
+              <a
+                href="https://linkedin.com/in/tavinathanson"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-purple-primary hover:text-purple-dark text-sm font-medium transition-colors"
+              >
+                LinkedIn →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

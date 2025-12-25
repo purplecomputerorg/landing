@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <section className="py-24 px-6 sm:px-8 lg:px-12 bg-purple-50">
+    <section id="how-it-works" className="py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-purple-50 to-purple-50 scroll-mt-16">
       <div className="max-w-4xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           Simple setup

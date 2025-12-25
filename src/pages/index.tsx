@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
 import ProblemSolution from '@/components/ProblemSolution';
@@ -27,6 +28,8 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/logo.svg" />
       </Head>
+
+      <Header />
 
       <main className="bg-white">
         <Hero />
