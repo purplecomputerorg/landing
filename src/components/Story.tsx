@@ -71,7 +71,7 @@ export default function Story() {
               </div>
               <div>
                 <span className="font-display font-bold text-gray-900 text-lg">
-                  A. Nathanson
+                  Resident Dinosaur Expert
                 </span>
                 <p className="text-gray-500 mt-1">
                   Age 4. Likes dinosaurs, space, and science experiments. Can count to 340.
