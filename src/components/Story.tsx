@@ -11,20 +11,22 @@ export default function Story() {
 
         <div className="text-lg text-gray-600 leading-relaxed space-y-6">
           <p>
-            It started with a simple request: a kid who wanted his own computer. Not to
-            watch videos or play games—just to explore the way he explores everything else.
-            The same way he has his own rolling pin in the kitchen, his own tools in the
-            garage. Real tools, not toys.
+            My 4-year-old wanted his own computer. He has his own rolling pin, his own
+            kid-sized tools. Why not a computer?
           </p>
 
           <p>
-            So an old MacBook—one that was too slow for anything useful—became something
-            new. Something built just for him.
+            We'd been doing "computer code" together on my laptop for a while: typing words
+            to see emojis, playing with colors and sounds. He loved it. So I took an old
+            laptop and turned it into something that was fully his. Type "cat" and see 🐱.
+            Press any key and hear a sound. Add text to speech so the computer reads back
+            what you type.
           </p>
 
           <p>
-            When he pressed a key and a sound came out, when he typed "cat" and saw 🐱,
-            the look on his face made it clear: this was worth sharing.
+            He's been helping me brainstorm new ideas for it ever since. Now we're working
+            on bringing it to more kids, and giving more old laptops a reason to stay out
+            of the junk drawer.
           </p>
         </div>
 
@@ -37,18 +39,17 @@ export default function Story() {
               T
             </div>
             <div>
-              <h3 className="font-display font-bold text-gray-900 text-lg">Tavi Nathanson</h3>
-              <p className="text-gray-500 mt-1">
-                Software engineer and father of two. Building Purple because his kids deserve better than tablets.
-              </p>
               <a
                 href="https://linkedin.com/in/tavinathanson"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-purple-primary hover:text-purple-dark text-sm font-medium transition-colors"
+                className="font-display font-bold text-gray-900 text-lg hover:text-purple-primary transition-colors"
               >
-                LinkedIn →
+                Tavi Nathanson
               </a>
+              <p className="text-gray-500 mt-1">
+                Software engineer and dad of two young kids.
+              </p>
             </div>
           </div>
         </div>

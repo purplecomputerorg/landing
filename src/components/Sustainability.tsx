@@ -17,7 +17,7 @@ export default function Sustainability() {
           <div className="space-y-6 text-purple-100">
             <p className="leading-relaxed">
               Purple Computer is built from the ground up to run smoothly on old hardware.
-              A laptop from 2012 with 2GB of RAM runs it beautifully. No lag, no frustration.
+              A decade-old laptop runs it beautifully. No lag, no frustration.
             </p>
 
             <p className="leading-relaxed">
@@ -27,7 +27,7 @@ export default function Sustainability() {
             </p>
 
             <p className="text-white font-medium">
-              One less device in a landfill. Five to ten more years of useful life.
+              One less device in a landfill. Years more of useful life.
             </p>
           </div>
         </div>

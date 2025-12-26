@@ -42,7 +42,7 @@ export default function HowItWorks() {
         </div>
 
         <p className="text-center text-gray-400 mt-16">
-          No tech skills needed. Works on most laptops from 2010–2020.
+          No tech skills needed.
         </p>
       </div>
     </section>
