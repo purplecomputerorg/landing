@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faCircleCheck, faInfinity, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faCircleCheck, faInfinity, faFeather } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProblemSolution() {
   return (
@@ -48,10 +48,10 @@ export default function ProblemSolution() {
 
           <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow ">
             <div className="flex items-start gap-6">
-              <FontAwesomeIcon icon={faClock} className="text-purple-primary flex-shrink-0 mt-1" style={{ width: '2rem', height: '2rem' }} />
+              <FontAwesomeIcon icon={faFeather} className="text-purple-primary flex-shrink-0 mt-1" style={{ width: '2rem', height: '2rem' }} />
               <div>
                 <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Built to bore them eventually</h3>
-                <p className="text-gray-500">Limited by design. They'll put it down when they're done.</p>
+                <p className="text-gray-500">No quests, no missions, no goals. They'll put it down when they're done.</p>
               </div>
             </div>
           </div>

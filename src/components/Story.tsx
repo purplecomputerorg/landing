@@ -11,7 +11,7 @@ export default function Story() {
         <div className="text-gray-600 leading-relaxed space-y-6 italic">
           <p>
             My 4-year-old wanted his own computer. He has his own rolling pin, his own
-            kid-sized tools. Why not a computer?
+            snow shovel. Why not a computer?
           </p>
 
           <p>
@@ -23,9 +23,8 @@ export default function Story() {
           </p>
 
           <p>
-            He's been helping me brainstorm new ideas for it ever since. Now we're working
-            on bringing it to more kids, and giving more old laptops a reason to stay out
-            of the junk drawer.
+            We've always been cautious about screen time. But this felt different: no
+            episodes, nothing addictive. Just exploring and creating.
           </p>
 
           <p className="text-gray-500 mt-4 not-italic">
@@ -37,22 +36,47 @@ export default function Story() {
           <p className="text-purple-primary font-semibold mb-6 tracking-wide uppercase text-sm">
             Team
           </p>
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
-              T
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
+                T
+              </div>
+              <div>
+                <a
+                  href="https://linkedin.com/in/tavinathanson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-display font-bold text-gray-900 text-lg hover:text-purple-primary transition-colors"
+                >
+                  Tavi Nathanson
+                </a>
+                <p className="text-gray-500 mt-1">
+                  Software engineer and dad of two young kids. Also{' '}
+                  <a
+                    href="https://tavicomedy.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-primary hover:underline"
+                  >
+                    runs comedy shows
+                  </a>{' '}
+                  in New Jersey.
+                </p>
+              </div>
             </div>
-            <div>
-              <a
-                href="https://linkedin.com/in/tavinathanson"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-display font-bold text-gray-900 text-lg hover:text-purple-primary transition-colors"
-              >
-                Tavi Nathanson
-              </a>
-              <p className="text-gray-500 mt-1">
-                Software engineer and dad of two young kids.
-              </p>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
+                A
+              </div>
+              <div>
+                <span className="font-display font-bold text-gray-900 text-lg">
+                  A. Nathanson
+                </span>
+                <p className="text-gray-500 mt-1">
+                  Age 4. Likes dinosaurs, space, and science experiments. Can count to 340.
+                </p>
+              </div>
             </div>
           </div>
         </div>
