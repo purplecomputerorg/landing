@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Section from '@/components/Section';
 import VideoSection from '@/components/VideoSection';
 import ProblemSolution from '@/components/ProblemSolution';
 import HowItWorks from '@/components/HowItWorks';
@@ -9,6 +10,16 @@ import Sustainability from '@/components/Sustainability';
 import Story from '@/components/Story';
 import PreorderCTA from '@/components/PreorderCTA';
 import Footer from '@/components/Footer';
+
+const sections = [
+  { component: VideoSection, id: undefined },
+  { component: ProblemSolution, id: undefined },
+  { component: HowItWorks, id: 'how-it-works' },
+  { component: Features, id: undefined },
+  { component: Sustainability, id: undefined },
+  { component: Story, id: 'story' },
+  { component: PreorderCTA, id: 'preorder' },
+];
 
 export default function Home() {
   return (
@@ -33,14 +44,12 @@ export default function Home() {
 
       <main className="bg-white">
         <Hero />
-        <VideoSection />
-        <ProblemSolution />
-        <HowItWorks />
-        <Features />
-        <Sustainability />
-        <Story />
-        <PreorderCTA />
-        <Footer />
+        {sections.map(({ component: Component, id }, index) => (
+          <Section key={index} index={index} id={id}>
+            <Component />
+          </Section>
+        ))}
+        <Footer startsWithPurple={(sections.length - 1) % 2 === 0} />
       </main>
     </>
   );

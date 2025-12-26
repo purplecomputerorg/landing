@@ -1,7 +1,6 @@
 export default function Story() {
   return (
-    <section id="story" className="py-24 px-6 sm:px-8 lg:px-12 bg-purple-50 scroll-mt-16">
-      <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           Our story
         </p>
@@ -53,7 +52,6 @@ export default function Story() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }

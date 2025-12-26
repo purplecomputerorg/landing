@@ -1,8 +1,18 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-50 via-white to-white pt-20">
       <div className="px-6 sm:px-8 lg:px-12 pb-20">
         <div className="max-w-4xl text-center">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/bot-2-purple.svg"
+              alt=""
+              width={120}
+              height={120}
+            />
+          </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tight">
             A calm creativity computer{' '}
             <span className="text-purple-primary">they can call their own</span>

@@ -1,7 +1,9 @@
 export default function VideoSection() {
   return (
-    <section className="py-20 px-6 sm:px-8 lg:px-12">
-      <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-12 text-center tracking-tight">
+          See it in action
+        </h2>
         <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-50 rounded-3xl flex items-center justify-center shadow-sm">
           <div className="text-center">
             <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center mx-auto mb-4">
@@ -16,7 +18,6 @@ export default function VideoSection() {
             <p className="text-purple-primary/60 font-medium">Video coming soon</p>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }

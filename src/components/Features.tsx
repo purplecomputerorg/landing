@@ -1,7 +1,6 @@
 export default function Features() {
   return (
-    <section className="py-24 px-6 sm:px-8 lg:px-12 bg-purple-50">
-      <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           What's inside
         </p>
@@ -10,7 +9,7 @@ export default function Features() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
             <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
               <span className="text-purple-primary/40 text-sm">Screenshot coming soon</span>
             </div>
@@ -28,7 +27,7 @@ export default function Features() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
             <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
               <span className="text-purple-primary/40 text-sm">Screenshot coming soon</span>
             </div>
@@ -46,7 +45,7 @@ export default function Features() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
             <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
               <span className="text-purple-primary/40 text-sm">Screenshot coming soon</span>
             </div>
@@ -64,7 +63,6 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }

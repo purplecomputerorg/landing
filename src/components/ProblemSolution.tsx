@@ -1,9 +1,8 @@
 export default function ProblemSolution() {
   return (
-    <section className="py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-white to-purple-50">
-      <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
-          A different kind of screen time
+          A creativity device, not an entertainment device
         </p>
         <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-6 text-center tracking-tight">
           Screen time without the guilt
@@ -14,27 +13,26 @@ export default function ProblemSolution() {
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
             <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">No internet</h3>
-            <p className="text-gray-500">No ads, no algorithms, no rabbit holes. Just creativity.</p>
+            <p className="text-gray-500">No ads, no algorithms, no tracking, no infinite feeds.</p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
             <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Nothing to break</h3>
-            <p className="text-gray-500">No settings to mess up, no files to delete, no apps to manage.</p>
+            <p className="text-gray-500">Kids get free rein of the whole computer. No settings to mess up, no files to lose.</p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">No login required</h3>
-            <p className="text-gray-500">Power on and it's ready. Hand it over and walk away.</p>
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Pay once, keep forever</h3>
+            <p className="text-gray-500">No subscriptions, no in-app purchases. Just yours.</p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
             <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Built to bore them eventually</h3>
             <p className="text-gray-500">Limited by design. They'll put it down when they're done.</p>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }

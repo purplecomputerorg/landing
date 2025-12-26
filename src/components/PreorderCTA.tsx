@@ -1,7 +1,6 @@
 export default function PreorderCTA() {
   return (
-    <section id="preorder" className="py-24 px-6 sm:px-8 lg:px-12 scroll-mt-16 bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-2xl mx-auto text-center">
+    <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-4 tracking-tight">
           Pre-order Purple Computer
         </h2>
@@ -32,7 +31,6 @@ export default function PreorderCTA() {
         <p className="text-gray-400 mt-8">
           Full refund if it doesn't work for you. No questions asked.
         </p>
-      </div>
-    </section>
+    </div>
   );
 }
