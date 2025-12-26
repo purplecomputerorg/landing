@@ -1,6 +1,6 @@
 export default function Sustainability() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="relative z-20 max-w-4xl mx-auto">
         <div className="bg-gradient-to-br from-purple-primary to-purple-dark rounded-3xl p-10 sm:p-16 text-white">
           <p className="text-purple-200 font-semibold mb-4 tracking-wide uppercase text-sm">
             Sustainability

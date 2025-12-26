@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="relative z-20 max-w-3xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           Our story
         </p>
@@ -8,7 +8,7 @@ export default function Story() {
           How Purple came to be
         </h2>
 
-        <div className="text-lg text-gray-600 leading-relaxed space-y-6">
+        <div className="text-gray-600 leading-relaxed space-y-6 italic">
           <p>
             My 4-year-old wanted his own computer. He has his own rolling pin, his own
             kid-sized tools. Why not a computer?
@@ -26,6 +26,10 @@ export default function Story() {
             He's been helping me brainstorm new ideas for it ever since. Now we're working
             on bringing it to more kids, and giving more old laptops a reason to stay out
             of the junk drawer.
+          </p>
+
+          <p className="text-gray-500 mt-4 not-italic">
+            — Tavi, Founder
           </p>
         </div>
 

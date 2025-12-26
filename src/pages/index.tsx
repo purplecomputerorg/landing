@@ -10,6 +10,7 @@ import Sustainability from '@/components/Sustainability';
 import Story from '@/components/Story';
 import PreorderCTA from '@/components/PreorderCTA';
 import Footer from '@/components/Footer';
+import PaintStroke from '@/components/PaintStroke';
 
 const sections = [
   { component: VideoSection, id: undefined },
@@ -42,7 +43,8 @@ export default function Home() {
 
       <Header />
 
-      <main className="bg-white">
+      <main className="relative bg-white">
+        <PaintStroke />
         <Hero />
         {sections.map(({ component: Component, id }, index) => (
           <Section key={index} index={index} id={id}>

@@ -1,6 +1,6 @@
 export default function ProblemSolution() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="relative z-20 max-w-4xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           A creativity device, not an entertainment device
         </p>

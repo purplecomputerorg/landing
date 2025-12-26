@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-50 via-white to-white pt-20">
       <div className="px-6 sm:px-8 lg:px-12 pb-20">
-        <div className="max-w-4xl text-center">
+        <div className="relative z-20 max-w-4xl text-center">
           <div className="flex justify-center mb-8">
             <Image
               src="/bot-2-purple.svg"

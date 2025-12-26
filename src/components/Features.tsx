@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="relative z-20 max-w-5xl mx-auto">
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           What's inside
         </p>

@@ -1,6 +1,6 @@
 export default function PreorderCTA() {
   return (
-    <div className="max-w-2xl mx-auto text-center">
+    <div className="relative z-20 max-w-2xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-4 tracking-tight">
           Pre-order Purple Computer
         </h2>
