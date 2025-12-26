@@ -6,6 +6,7 @@ import VideoSection from '@/components/VideoSection';
 import ProblemSolution from '@/components/ProblemSolution';
 import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
+import LittleThings from '@/components/LittleThings';
 import Sustainability from '@/components/Sustainability';
 import Story from '@/components/Story';
 import PreorderCTA from '@/components/PreorderCTA';
@@ -17,6 +18,7 @@ const sections = [
   { component: ProblemSolution, id: undefined },
   { component: HowItWorks, id: 'how-it-works' },
   { component: Features, id: undefined },
+  { component: LittleThings, id: undefined },
   { component: Sustainability, id: undefined },
   { component: Story, id: 'story' },
   { component: PreorderCTA, id: 'preorder' },

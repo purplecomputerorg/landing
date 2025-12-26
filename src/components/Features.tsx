@@ -9,7 +9,7 @@ const features = [
   {
     icon: faCommentDots,
     title: 'Ask',
-    description: 'Type a word, see an emoji. Mix colors and do math. A gentle first step into computing.',
+    description: 'Type a word, see an emoji, hear it spoken. Mix colors. Do math. Unlimited combinations to explore.',
     screenshot: '/ask_screenshot_cropped.png',
     bgSize: '200%',
     bgPosition: '15% 65%', // Left side, showing the text and emojis

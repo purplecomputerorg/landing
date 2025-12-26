@@ -33,8 +33,8 @@ export default function PreorderCTA() {
           </a>
 
           <div className="text-purple-200 space-y-1">
-            <p><span className="font-bold text-white">April 2026</span> for Intel Macs (2013 to 2018)</p>
-            <p className="text-purple-300 text-sm">Other laptops coming soon after</p>
+            <p><span className="font-bold text-white">April 2026</span> for older Intel Macs (2013 to 2018)</p>
+            <p className="text-purple-300 text-sm">Perfect for that laptop in the closet. Other models coming soon.</p>
           </div>
 
           <div className="mt-8 pt-6 border-t border-purple-400/30 flex items-center justify-center gap-4 text-purple-100 text-left">
