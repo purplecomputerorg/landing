@@ -11,6 +11,7 @@ const details = [
   { text: 'Autocomplete suggestions', subtext: 'Less typing for small fingers' },
   { text: 'No error messages', subtext: 'Everything does something' },
   { text: 'No shift key needed', subtext: 'Double-tap for symbols' },
+  { text: 'Forgiving math', subtext: "Typos don't break calculations" },
 ];
 
 export default function LittleThings() {
@@ -35,7 +36,7 @@ export default function LittleThings() {
           </span>
         ))}
       </div>
-      <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
         {details.map((detail) => (
           <div key={detail.text} className="text-center">
             <p className="text-gray-900 font-semibold mb-1">{detail.text}</p>
