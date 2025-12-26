@@ -18,8 +18,11 @@ export default function Hero() {
             <span className="text-purple-primary">they can call their own</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-gray-500 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl text-gray-500 mb-4 leading-relaxed max-w-2xl mx-auto">
             Transform your old laptop into a distraction-free space for kids to explore, create, and play.
+          </p>
+          <p className="text-purple-primary font-medium mb-12">
+            Designed for ages 3-8
           </p>
 
           <div className="flex flex-col items-center gap-3">
