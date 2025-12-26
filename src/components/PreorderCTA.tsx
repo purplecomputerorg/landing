@@ -14,12 +14,14 @@ export default function PreorderCTA() {
 
         <div className="bg-gradient-to-br from-purple-primary to-purple-dark text-white rounded-3xl p-10 sm:p-12 shadow-xl shadow-purple-primary/20">
           <div className="mb-8">
-            <div className="flex items-center justify-center gap-3">
+            <div className="inline-block bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4">
+              $50 now, $80 after launch
+            </div>
+            <div className="flex items-center justify-center">
               <span className="text-6xl font-display font-extrabold">$50</span>
-              <span className="text-3xl text-purple-300 line-through">$80</span>
             </div>
             <p className="text-purple-200 mt-2">
-              Pre-order price. Save $30.
+              Save $30 with pre-order pricing.
             </p>
           </div>
 

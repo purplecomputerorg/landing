@@ -38,7 +38,7 @@ export default function Home() {
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />

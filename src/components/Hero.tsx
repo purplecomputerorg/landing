@@ -30,10 +30,10 @@ export default function Hero() {
               href="#preorder"
               className="px-8 py-4 bg-purple-primary text-white rounded-full font-semibold text-lg hover:bg-purple-dark transition-all hover:shadow-lg hover:shadow-purple-primary/25"
             >
-              Pre-order for $50 <span className="line-through opacity-70">$80</span>
+              Pre-order for $50
             </a>
-            <span className="text-sm text-gray-500">
-              Save $30 before launch
+            <span className="text-sm text-purple-primary font-medium bg-purple-100 px-3 py-1 rounded-full">
+              $50 now, $80 after launch
             </span>
           </div>
         </div>
