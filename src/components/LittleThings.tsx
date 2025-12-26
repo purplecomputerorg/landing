@@ -25,7 +25,7 @@ export default function LittleThings() {
       <p className="text-gray-600 text-center mb-8 text-lg max-w-2xl mx-auto">
         Try typing things like:
       </p>
-      <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-xl mx-auto relative z-20">
         {examples.map((example) => (
           <span
             key={example}

@@ -65,7 +65,7 @@ export default function Features() {
             >
               <button
                 onClick={() => openModal(index)}
-                className="w-full aspect-square relative overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-primary focus:ring-offset-2 rounded-t-2xl"
+                className="w-full aspect-square relative overflow-hidden group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary focus-visible:ring-inset rounded-t-2xl"
                 aria-label={`View ${feature.title} screenshot`}
               >
                 {/* Zoomed-in crop of the screenshot */}
