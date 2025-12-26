@@ -9,26 +9,11 @@ export default function Sustainability() {
             Give your old laptop a second life
           </h2>
 
-          <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+          <p className="text-purple-100 leading-relaxed">
             That laptop in your drawer still works. It's just too slow for modern software.
+            Purple Computer runs beautifully on decade-old hardware: no lag, no new device needed.
+            One less device in a landfill, years more of useful life.
           </p>
-
-          <div className="space-y-6 text-purple-100">
-            <p className="leading-relaxed">
-              Purple Computer is built from the ground up to run smoothly on old hardware.
-              A decade-old laptop runs it beautifully. No lag, no frustration.
-            </p>
-
-            <p className="leading-relaxed">
-              Most "repurpose your old computer" projects struggle because modern software
-              demands modern specs. Purple doesn't. It's designed for hardware that's already
-              in your home.
-            </p>
-
-            <p className="text-white font-medium">
-              One less device in a landfill. Years more of useful life.
-            </p>
-          </div>
         </div>
     </div>
   );
