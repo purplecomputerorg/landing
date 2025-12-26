@@ -48,7 +48,7 @@ export default function Features() {
   }));
 
   return (
-    <div className="relative z-20 max-w-5xl mx-auto">
+    <div className="relative z-20 max-w-6xl mx-auto">
       <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
         What's inside
       </p>
@@ -64,7 +64,7 @@ export default function Features() {
           >
             <button
               onClick={() => openModal(index)}
-              className="w-full aspect-[4/3] relative overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-primary focus:ring-offset-2 rounded-t-2xl"
+              className="w-full aspect-square relative overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-primary focus:ring-offset-2 rounded-t-2xl"
               aria-label={`View ${feature.title} screenshot`}
             >
               {/* Zoomed-in crop of the screenshot */}
