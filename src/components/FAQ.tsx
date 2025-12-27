@@ -1,8 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 
-const faqs = [
+const faqs: { question: string; answer: ReactNode }[] = [
+  {
+    question: "Why is there no internet? What does that even mean?",
+    answer:
+      "Purple Computer has no Wi-Fi, no browser, no way to connect to the internet. That means no ads, no algorithms, no tracking, no strangers, no in-app purchases, and no rabbit holes. It's just the Purple Computer software. This makes it automatically secure: there's nothing to hack into and no way for kids to stumble onto something they shouldn't.",
+  },
+  {
+    question: 'Will my kid actually use this?',
+    answer:
+      "Kids who like typing, drawing, or making sounds tend to love it. It's not a replacement for tablets or games. It's a calm creative tool. Some kids use it for 20 minutes a day; others go through phases. That's the point: it doesn't try to hook them.",
+  },
   {
     question: 'Can it run on my laptop?',
     answer:
@@ -11,22 +21,23 @@ const faqs = [
   {
     question: 'Can I undo it and restore the laptop?',
     answer:
-      "Yes. The installation replaces what's on the laptop, but you can always reinstall macOS or Windows later if you want. We recommend using a laptop you're not using for anything else.",
-  },
-  {
-    question: 'Will my kid actually use this?',
-    answer:
-      "Kids who like typing, drawing, or making sounds tend to love it. It's not a replacement for tablets or games. It's a calm creative tool. Some kids use it for 20 minutes a day; others go through phases. That's the point: it doesn't try to hook them.",
+      "Yes, you can always reinstall macOS or Windows later. Purple should be installed on a laptop that's not being used for anything else. Before installing, you'll be able to test that Purple works on your laptop without erasing anything.",
   },
   {
     question: 'How do updates work with no internet?',
     answer:
-      "We'll send you a new USB drive with major updates, or you can download updates on another computer and transfer them. Most updates are optional since the core experience is simple and stable.",
+      "Updates are optional because the core experience is simple, stable, and offline. If you'd like to update the software, you can download an update to a USB drive and plug it in, or choose to get a new one mailed.",
   },
   {
     question: "What's the refund policy?",
-    answer:
-      "Full refund if it doesn't work for you. At any time. No questions, no returns needed. Just email us.",
+    answer: (
+      <>
+        Full refund if it doesn't work for you. At any time. No questions, no returns needed. Just email{' '}
+        <a href="mailto:tavi@purplecomputer.org" className="text-purple-primary hover:underline">
+          tavi@purplecomputer.org
+        </a>.
+      </>
+    ),
   },
 ];
 
