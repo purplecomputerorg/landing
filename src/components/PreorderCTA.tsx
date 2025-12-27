@@ -33,12 +33,14 @@ export default function PreorderCTA() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href="#preorder"
-              className="px-10 py-4 bg-white text-purple-primary rounded-full font-bold text-lg hover:shadow-lg transition-all"
-            >
-              Pre-order now
-            </a>
+            <form action="/api/checkout" method="POST">
+              <button
+                type="submit"
+                className="px-10 py-4 bg-white text-purple-primary rounded-full font-bold text-lg hover:shadow-lg transition-all"
+              >
+                Pre-order now
+              </button>
+            </form>
             <button
               onClick={() => setModalOpen(true)}
               className="px-8 py-4 bg-transparent text-white border-2 border-white/50 rounded-full font-semibold hover:bg-white/10 transition-all"
