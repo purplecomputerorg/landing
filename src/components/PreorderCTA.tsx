@@ -48,13 +48,15 @@ export default function PreorderCTA() {
           </div>
 
           <div className="text-purple-200 space-y-1 mb-8">
-            <p><span className="font-bold text-white">April 2026</span> for older Intel Macs (2013 to 2018)</p>
+            <p><span className="font-bold text-white">April 2026</span> for older Intel Macs</p>
             <p className="text-purple-300 text-sm">Perfect for that laptop in the closet. Other models coming soon.</p>
           </div>
 
-          <div className="pt-6 border-t border-purple-400/30 flex items-center justify-center gap-4 text-purple-100 text-left">
-            <FontAwesomeIcon icon={faShieldHeart} className="flex-shrink-0" style={{ width: '1.75rem', height: '1.75rem' }} />
-            <span>Full refund if it doesn't work for you. At any time. No questions, no returns needed.</span>
+          <div className="pt-6 border-t border-purple-400/30 text-purple-100">
+            <div className="flex items-center justify-center gap-3 text-left">
+              <FontAwesomeIcon icon={faShieldHeart} className="flex-shrink-0" style={{ width: '1.5rem', height: '1.5rem' }} />
+              <span><span className="font-bold text-white">Not sure if your laptop is supported?</span> Pre-order anyway. Full refund anytime, no questions asked.</span>
+            </div>
           </div>
         </div>
       </div>

@@ -8,10 +8,21 @@ interface ReadinessModalProps {
   onClose: () => void;
 }
 
+const yearOptions = [
+  { value: '', label: 'Select year...' },
+  { value: '2013-2015', label: '2013-2015' },
+  { value: '2016-2018', label: '2016-2018' },
+  { value: '2019-2020', label: '2019-2020' },
+  { value: '2021+', label: '2021 or newer' },
+  { value: 'older', label: 'Older than 2013' },
+  { value: 'not-sure', label: "Not sure" },
+];
+
 export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps) {
   const [query, setQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState<LaptopModel | null>(null);
   const [isCustom, setIsCustom] = useState(false);
+  const [yearRange, setYearRange] = useState('');
   const [email, setEmail] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
@@ -42,6 +53,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
       setQuery('');
       setSelectedModel(null);
       setIsCustom(false);
+      setYearRange('');
       setEmail('');
       setSubmitted(false);
       setShowDropdown(false);
@@ -102,13 +114,19 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
     e.preventDefault();
     if (!email.trim()) return;
     if (!selectedModel && !isCustom) return;
+    if (!yearRange) return;
 
     setSubmitting(true);
+
+    const isPriorityMac = selectedModel?.category === 'mac' &&
+      (yearRange === '2013-2015' || yearRange === '2016-2018');
 
     const payload = {
       laptopModel: selectedModel?.label || query,
       laptopValue: selectedModel?.value || 'custom',
       laptopCategory: selectedModel?.category || 'unknown',
+      yearRange,
+      isPriorityMac,
       wasSelected: !!selectedModel,
       email: email.trim(),
       timestamp: new Date().toISOString(),
@@ -128,7 +146,10 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
     setSubmitting(false);
   };
 
-  const isFormValid = email.trim() && (selectedModel || isCustom);
+  const hasLaptopSelected = selectedModel || isCustom;
+  const isPriorityMac = selectedModel?.category === 'mac' &&
+    (yearRange === '2013-2015' || yearRange === '2016-2018');
+  const isFormValid = email.trim() && hasLaptopSelected && yearRange;
 
   if (!isOpen) return null;
 
@@ -139,7 +160,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
         onClick={onClose}
       />
 
-      <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 overflow-visible">
+      <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 overflow-visible">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
@@ -152,20 +173,18 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
 
         {!submitted ? (
           <>
-            <h2 className="text-2xl font-display font-bold text-gray-900 mb-2">
-              Get notified about your laptop
+            <h2 className="text-2xl font-display font-bold text-gray-900 mb-1">
+              Check your laptop
             </h2>
-            <p className="text-purple-primary font-medium mb-3">
-              Purple works on most old laptops, Mac or PC.
-            </p>
-            <p className="text-gray-500 mb-6">
-              We're rolling out support in waves, starting with Intel Macs (2013-2018). Tell us what you have and we'll personally let you know when yours is ready.
+            <p className="text-gray-500 text-sm mb-5">
+              We're rolling out support in waves, starting with older Intel Macs.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Laptop model autocomplete */}
               <div className="relative" ref={dropdownRef}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Your laptop
+                  Laptop model
                 </label>
                 <input
                   ref={inputRef}
@@ -181,57 +200,66 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                     if (query.trim()) setShowDropdown(true);
                   }}
                   onKeyDown={handleKeyDown}
-                  placeholder="Start typing (e.g. MacBook Pro 2015)"
-                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all ${
-                    selectedModel || isCustom ? 'border-green-400 bg-green-50' : 'border-gray-300'
+                  placeholder="Start typing (e.g. MacBook Pro)"
+                  className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm ${
+                    hasLaptopSelected ? 'border-green-400 bg-green-50' : 'border-gray-300'
                   }`}
                 />
-                {(selectedModel || isCustom) && (
-                  <div className="mt-2">
-                    <p className="text-xs text-green-600">
-                      {selectedModel ? `Selected: ${selectedModel.label}` : `Custom: ${query}`}
-                    </p>
-                    {selectedModel?.category === 'mac-priority' && (
-                      <p className="text-xs text-purple-primary font-medium mt-1">
-                        Launching April 2026
-                      </p>
-                    )}
-                  </div>
-                )}
 
                 {showDropdown && (filteredModels.length > 0 || showOtherOption) && (
-                  <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-64 overflow-y-auto">
+                  <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-48 overflow-y-auto">
                     {filteredModels.map((model, index) => (
                       <button
                         key={model.value}
                         type="button"
                         onClick={() => handleSelect(model)}
-                        className={`w-full text-left px-4 py-3 transition-colors first:rounded-t-xl ${
+                        className={`w-full text-left px-4 py-2.5 transition-colors first:rounded-t-xl text-sm ${
                           index === highlightedIndex ? 'bg-purple-50' : 'hover:bg-gray-50'
                         } ${!showOtherOption && index === filteredModels.length - 1 ? 'rounded-b-xl' : ''}`}
                       >
                         <span className="text-gray-900">{model.label}</span>
-                        {model.category === 'mac-priority' && (
-                          <span className="ml-2 text-xs text-green-600 font-medium">April 2026</span>
-                        )}
                       </button>
                     ))}
                     {showOtherOption && (
                       <button
                         type="button"
                         onClick={handleSelectOther}
-                        className={`w-full text-left px-4 py-3 transition-colors border-t border-gray-100 rounded-b-xl ${
+                        className={`w-full text-left px-4 py-2.5 transition-colors border-t border-gray-100 rounded-b-xl text-sm ${
                           highlightedIndex === filteredModels.length ? 'bg-purple-50' : 'hover:bg-gray-50'
                         }`}
                       >
-                        <span className="text-purple-primary font-medium">Use "{query}"</span>
-                        <span className="text-gray-400 text-sm ml-2">Not in list? No problem.</span>
+                        <span className="text-purple-primary font-medium">"{query}"</span>
+                        <span className="text-gray-400 ml-2">Not in list</span>
                       </button>
                     )}
                   </div>
                 )}
               </div>
 
+              {/* Year dropdown */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Approximate year
+                </label>
+                <select
+                  value={yearRange}
+                  onChange={(e) => setYearRange(e.target.value)}
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none bg-white"
+                >
+                  {yearOptions.map((opt) => (
+                    <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Priority Mac message */}
+              {isPriorityMac && (
+                <p className="text-sm text-green-600 font-medium bg-green-50 px-3 py-2 rounded-lg">
+                  Great news: Intel Macs from {yearRange} are in our first wave, launching April 2026.
+                </p>
+              )}
+
+              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email
@@ -242,40 +270,78 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm"
                 />
-                <p className="text-xs text-gray-400 mt-1">
-                  We'll email you personally. No spam, no newsletter.
-                </p>
               </div>
 
+              {/* Submit */}
               <button
                 type="submit"
                 disabled={submitting || !isFormValid}
-                className="w-full py-3 bg-purple-primary text-white rounded-xl font-semibold hover:bg-purple-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-2.5 bg-gray-100 text-gray-700 rounded-xl font-medium text-sm hover:bg-gray-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? 'Submitting...' : 'Notify me when ready'}
               </button>
+
+              {/* Preorder CTA */}
+              <div className="relative py-4">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300"></div>
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-white px-3 text-sm text-gray-500">or</span>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 rounded-xl p-4">
+                <a
+                  href="#preorder"
+                  onClick={onClose}
+                  className="block w-full py-2.5 bg-purple-primary text-white rounded-lg font-semibold hover:bg-purple-dark transition-all text-center text-sm"
+                >
+                  Pre-order for $50
+                </a>
+                <p className="text-xs text-gray-600 text-center mt-2">
+                  Lock in the price. Full refund if not supported or you change your mind.
+                </p>
+              </div>
             </form>
           </>
         ) : (
-          <div className="text-center py-4">
-            <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-purple-100">
-              <svg className="w-8 h-8 text-purple-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="text-center py-2">
+            <div className="w-14 h-14 rounded-full mx-auto mb-3 flex items-center justify-center bg-green-100">
+              <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
               You're on the list!
             </h3>
-            <p className="text-gray-500 mb-6">
-              We'll personally email you at <span className="font-medium text-gray-700">{email}</span> when support for your laptop is ready.
+            <p className="text-gray-500 text-sm mb-5">
+              We'll email you at <span className="font-medium text-gray-700">{email}</span> when your laptop is supported.
             </p>
+
+            <div className="bg-purple-50 rounded-xl p-4 mb-4">
+              <p className="text-purple-primary font-semibold text-sm mb-1">
+                Want to lock in the $50 price?
+              </p>
+              <p className="text-gray-500 text-xs mb-3">
+                Full refund if your laptop isn't supported, or if you change your mind.
+              </p>
+              <a
+                href="#preorder"
+                onClick={onClose}
+                className="inline-block px-5 py-2 bg-purple-primary text-white rounded-full font-semibold text-sm hover:bg-purple-dark transition-all"
+              >
+                Pre-order now
+              </a>
+            </div>
+
             <button
               onClick={onClose}
-              className="px-6 py-3 bg-purple-primary text-white rounded-xl font-semibold hover:bg-purple-dark transition-all"
+              className="text-gray-400 hover:text-gray-600 text-sm transition-colors"
             >
-              Got it
+              Maybe later
             </button>
           </div>
         )}
