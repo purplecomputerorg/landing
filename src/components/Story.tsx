@@ -37,7 +37,7 @@ export default function Story() {
             Team
           </p>
           <div className="space-y-6">
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
                 T
               </div>
@@ -65,7 +65,7 @@ export default function Story() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-purple-primary flex items-center justify-center text-white font-display font-bold text-lg flex-shrink-0">
                 A
               </div>
@@ -74,7 +74,7 @@ export default function Story() {
                   Resident Dinosaur Expert
                 </span>
                 <p className="text-gray-500 mt-1">
-                  Age 4. Likes dinosaurs, space, and science experiments. Can count to 340.
+                  Age 4. Likes dinosaurs, space, and science experiments. Can count to 340. Regular user of his own Purple Computer, but he doesn't actually pick it up every day. That's the point!
                 </p>
               </div>
             </div>
