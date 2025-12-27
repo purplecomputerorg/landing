@@ -187,9 +187,16 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   }`}
                 />
                 {(selectedModel || isCustom) && (
-                  <p className="text-xs text-green-600 mt-1">
-                    {selectedModel ? `Selected: ${selectedModel.label}` : `Custom: ${query}`}
-                  </p>
+                  <div className="mt-2">
+                    <p className="text-xs text-green-600">
+                      {selectedModel ? `Selected: ${selectedModel.label}` : `Custom: ${query}`}
+                    </p>
+                    {selectedModel?.category === 'mac-priority' && (
+                      <p className="text-xs text-purple-primary font-medium mt-1">
+                        Launching April 2026
+                      </p>
+                    )}
+                  </div>
                 )}
 
                 {showDropdown && (filteredModels.length > 0 || showOtherOption) && (
