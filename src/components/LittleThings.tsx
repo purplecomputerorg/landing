@@ -23,12 +23,12 @@ const colorMixSubtext = (
 );
 
 const details: { text: string; subtext: React.ReactNode }[] = [
-  { text: 'Autocomplete suggestions', subtext: 'Less typing for small fingers' },
+  { text: 'Suggestions autocomplete', subtext: 'Less typing for small fingers' },
   { text: 'No error messages', subtext: 'Everything does something' },
   { text: 'No shift key needed', subtext: 'Double-tap for symbols' },
   { text: 'Forgiving math', subtext: "Typos don't break calculations" },
   { text: 'Colors mix like paint', subtext: colorMixSubtext },
-  { text: 'Reads words aloud', subtext: 'Hear everything you type' },
+  { text: 'Optionally speaks words', subtext: 'Hear everything you type' },
 ];
 
 export default function LittleThings() {
