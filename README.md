@@ -27,6 +27,36 @@ npm run build
 npm start
 ```
 
+## Deploy to Vercel
+
+```bash
+npm i -g vercel
+vercel
+```
+
+For production deployment:
+
+```bash
+vercel --prod
+```
+
+Or connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deployments on push.
+
+### Custom Domain (Namecheap)
+
+1. In Vercel: Go to your project Settings > Domains > Add your domain
+2. In Namecheap: Go to Domain List > Manage > Advanced DNS
+3. Add these records:
+   - Type: `A`, Host: `@`, Value: `216.198.79.1`
+   - Type: `CNAME`, Host: `www`, Value: `cname.vercel-dns.com`
+4. Wait for DNS propagation (can take up to 48 hours, usually faster)
+
+**Alternative: Use Vercel DNS.** Instead of adding individual records, you can transfer DNS management to Vercel entirely. In Namecheap, go to Domain List > Manage > Domain, and set Custom DNS to:
+- `ns1.vercel-dns.com`
+- `ns2.vercel-dns.com`
+
+This gives Vercel full control of your DNS. Use the A/CNAME approach above if you want to keep managing other DNS records in Namecheap.
+
 ## Project Structure
 
 ```
