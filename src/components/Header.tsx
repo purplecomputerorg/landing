@@ -17,17 +17,25 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden sm:flex items-center gap-8">
-          <a href="#how-it-works" className="text-gray-600 hover:text-purple-primary transition-colors text-sm font-medium">
-            How it works
+        <div className="flex items-center gap-6">
+          <nav className="hidden sm:flex items-center gap-6">
+            <a href="#how-it-works" className="text-gray-600 hover:text-purple-primary transition-colors text-sm font-medium">
+              How it works
+            </a>
+            <a href="#story" className="text-gray-600 hover:text-purple-primary transition-colors text-sm font-medium">
+              Our story
+            </a>
+            <a href="#faq" className="text-gray-600 hover:text-purple-primary transition-colors text-sm font-medium">
+              FAQ
+            </a>
+          </nav>
+          <a
+            href="#preorder"
+            className="px-4 py-2 bg-purple-primary text-white rounded-full font-semibold text-sm hover:bg-purple-dark transition-colors"
+          >
+            Pre-order $50
           </a>
-          <a href="#story" className="text-gray-600 hover:text-purple-primary transition-colors text-sm font-medium">
-            Our story
-          </a>
-          <a href="#preorder" className="text-purple-primary font-semibold text-sm">
-            Pre-order
-          </a>
-        </nav>
+        </div>
       </div>
     </header>
   );

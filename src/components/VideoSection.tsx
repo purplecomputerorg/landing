@@ -15,7 +15,7 @@ export default function VideoSection() {
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
-            <p className="text-purple-primary/60 font-medium">Video coming soon</p>
+            <p className="text-purple-primary/40 text-sm">Demo video</p>
           </div>
         </div>
     </div>

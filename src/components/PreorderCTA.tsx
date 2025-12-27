@@ -1,9 +1,16 @@
+'use client';
+
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldHeart } from '@fortawesome/free-solid-svg-icons';
+import ReadinessModal from './ReadinessModal';
 
 export default function PreorderCTA() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <div className="relative z-20 max-w-4xl mx-auto text-center">
+    <>
+      <div className="relative z-20 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-4 tracking-tight">
           Pre-order Purple Computer
         </h2>
@@ -25,23 +32,34 @@ export default function PreorderCTA() {
             </p>
           </div>
 
-          <a
-            href="#preorder"
-            className="inline-block px-10 py-4 bg-white text-purple-primary rounded-full font-bold text-lg hover:shadow-lg transition-all mb-8"
-          >
-            Pre-order now
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a
+              href="#preorder"
+              className="px-10 py-4 bg-white text-purple-primary rounded-full font-bold text-lg hover:shadow-lg transition-all"
+            >
+              Pre-order now
+            </a>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="px-8 py-4 bg-transparent text-white border-2 border-white/50 rounded-full font-semibold hover:bg-white/10 transition-all"
+            >
+              Check my laptop
+            </button>
+          </div>
 
-          <div className="text-purple-200 space-y-1">
+          <div className="text-purple-200 space-y-1 mb-8">
             <p><span className="font-bold text-white">April 2026</span> for older Intel Macs (2013 to 2018)</p>
             <p className="text-purple-300 text-sm">Perfect for that laptop in the closet. Other models coming soon.</p>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-purple-400/30 flex items-center justify-center gap-4 text-purple-100 text-left">
+          <div className="pt-6 border-t border-purple-400/30 flex items-center justify-center gap-4 text-purple-100 text-left">
             <FontAwesomeIcon icon={faShieldHeart} className="flex-shrink-0" style={{ width: '1.75rem', height: '1.75rem' }} />
             <span>Full refund if it doesn't work for you. At any time. No questions, no returns needed.</span>
           </div>
         </div>
-    </div>
+      </div>
+
+      <ReadinessModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+    </>
   );
 }

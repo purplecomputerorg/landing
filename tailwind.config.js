@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Nunito', 'Inter', 'system-ui', 'sans-serif'],
+        cursive: ['Caveat', 'cursive'],
       },
     },
   },

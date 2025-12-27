@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
+import SuccessPicture from '@/components/SuccessPicture';
 import VideoSection from '@/components/VideoSection';
 import ProblemSolution from '@/components/ProblemSolution';
 import HowItWorks from '@/components/HowItWorks';
@@ -9,11 +10,13 @@ import Features from '@/components/Features';
 import LittleThings from '@/components/LittleThings';
 import Sustainability from '@/components/Sustainability';
 import Story from '@/components/Story';
+import FAQ from '@/components/FAQ';
 import PreorderCTA from '@/components/PreorderCTA';
 import Footer from '@/components/Footer';
 import PaintStroke from '@/components/PaintStroke';
 
 const sections = [
+  { component: SuccessPicture, id: undefined },
   { component: VideoSection, id: undefined },
   { component: ProblemSolution, id: undefined },
   { component: HowItWorks, id: 'how-it-works' },
@@ -21,6 +24,7 @@ const sections = [
   { component: LittleThings, id: undefined },
   { component: Sustainability, id: undefined },
   { component: Story, id: 'story' },
+  { component: FAQ, id: 'faq' },
   { component: PreorderCTA, id: 'preorder' },
 ];
 

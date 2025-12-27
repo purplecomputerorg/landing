@@ -7,12 +7,16 @@ export default function ProblemSolution() {
         <p className="text-purple-primary font-semibold mb-4 text-center tracking-wide uppercase text-sm">
           A creativity device, not an entertainment device
         </p>
-        <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-gray-900 mb-6 text-center tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-gray-900 mb-6 text-center tracking-tight">
           Screen time without the guilt
         </h2>
 
-        <p className="text-xl text-gray-500 mb-16 text-center leading-relaxed max-w-2xl mx-auto">
-          Most kids' devices are designed to capture attention. Purple is designed to set it free.
+        <p className="text-lg sm:text-xl text-gray-500 mb-16 text-center leading-relaxed max-w-2xl mx-auto">
+          Most kids' devices are designed to capture attention.
+        </p>
+        <p className="text-lg sm:text-xl text-purple-primary font-semibold mb-16 text-center -mt-10">
+          <span className="text-purple-300 mr-2">↳</span>
+          Purple is designed to set it free.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">
@@ -50,12 +54,15 @@ export default function ProblemSolution() {
             <div className="flex items-start gap-6">
               <FontAwesomeIcon icon={faFeather} className="text-purple-primary flex-shrink-0 mt-1" style={{ width: '2rem', height: '2rem' }} />
               <div>
-                <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Built to bore them eventually</h3>
+                <h3 className="font-display font-bold text-gray-900 mb-2 text-lg">Built to bore them eventually*</h3>
                 <p className="text-gray-500">No quests, no missions, no goals. They'll put it down when they're done.</p>
               </div>
             </div>
           </div>
         </div>
+        <p className="text-center text-gray-500 text-sm mt-8">
+          *Promising boredom is probably a poor marketing decision, but we're running with it.
+        </p>
     </div>
   );
 }
