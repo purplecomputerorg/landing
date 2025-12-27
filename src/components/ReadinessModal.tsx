@@ -241,15 +241,25 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Approximate year
                 </label>
-                <select
-                  value={yearRange}
-                  onChange={(e) => setYearRange(e.target.value)}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none bg-white"
-                >
-                  {yearOptions.map((opt) => (
-                    <option key={opt.value} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <select
+                    value={yearRange}
+                    onChange={(e) => setYearRange(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none bg-white appearance-none cursor-pointer"
+                  >
+                    {yearOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                  <svg
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
 
               {/* Priority Mac message */}
