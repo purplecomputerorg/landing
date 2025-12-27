@@ -160,10 +160,10 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
         onClick={onClose}
       />
 
-      <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 overflow-visible">
+      <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-5 [@media(max-height:700px)]:p-4 sm:p-8 overflow-visible">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 [@media(max-height:700px)]:top-3 [@media(max-height:700px)]:right-3 text-gray-400 hover:text-gray-600 transition-colors"
           aria-label="Close"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,14 +173,14 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
 
         {!submitted ? (
           <>
-            <h2 className="text-2xl font-display font-bold text-gray-900 mb-1">
+            <h2 className="text-2xl [@media(max-height:700px)]:text-xl font-display font-bold text-gray-900 mb-1">
               Check your laptop
             </h2>
-            <p className="text-gray-500 text-sm mb-5">
+            <p className="text-gray-500 text-sm mb-5 [@media(max-height:700px)]:mb-3">
               We're rolling out support in waves, starting with older Intel Macs.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 [@media(max-height:700px)]:space-y-3">
               {/* Laptop model autocomplete */}
               <div className="relative" ref={dropdownRef}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -201,19 +201,19 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   }}
                   onKeyDown={handleKeyDown}
                   placeholder="Start typing (e.g. MacBook Pro)"
-                  className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm ${
+                  className={`w-full px-4 py-2.5 [@media(max-height:700px)]:py-2 border rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm ${
                     hasLaptopSelected ? 'border-green-400 bg-green-50' : 'border-gray-300'
                   }`}
                 />
 
                 {showDropdown && (filteredModels.length > 0 || showOtherOption) && (
-                  <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-48 overflow-y-auto">
+                  <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-48 [@media(max-height:700px)]:max-h-32 overflow-y-auto">
                     {filteredModels.map((model, index) => (
                       <button
                         key={model.value}
                         type="button"
                         onClick={() => handleSelect(model)}
-                        className={`w-full text-left px-4 py-2.5 transition-colors first:rounded-t-xl text-sm ${
+                        className={`w-full text-left px-4 py-2.5 [@media(max-height:700px)]:py-1.5 transition-colors first:rounded-t-xl text-sm ${
                           index === highlightedIndex ? 'bg-purple-50' : 'hover:bg-gray-50'
                         } ${!showOtherOption && index === filteredModels.length - 1 ? 'rounded-b-xl' : ''}`}
                       >
@@ -224,7 +224,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                       <button
                         type="button"
                         onClick={handleSelectOther}
-                        className={`w-full text-left px-4 py-2.5 transition-colors border-t border-gray-100 rounded-b-xl text-sm ${
+                        className={`w-full text-left px-4 py-2.5 [@media(max-height:700px)]:py-1.5 transition-colors border-t border-gray-100 rounded-b-xl text-sm ${
                           highlightedIndex === filteredModels.length ? 'bg-purple-50' : 'hover:bg-gray-50'
                         }`}
                       >
@@ -245,7 +245,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   <select
                     value={yearRange}
                     onChange={(e) => setYearRange(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none bg-white appearance-none cursor-pointer"
+                    className="w-full px-4 py-2.5 [@media(max-height:700px)]:py-2 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none bg-white appearance-none cursor-pointer"
                   >
                     {yearOptions.map((opt) => (
                       <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -280,7 +280,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   required
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm"
+                  className="w-full px-4 py-2.5 [@media(max-height:700px)]:py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-primary focus:border-transparent outline-none transition-all text-sm"
                 />
               </div>
 
@@ -288,13 +288,13 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
               <button
                 type="submit"
                 disabled={submitting || !isFormValid}
-                className="w-full py-2.5 bg-white text-purple-primary border-2 border-purple-primary rounded-xl font-semibold text-sm hover:bg-purple-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-400"
+                className="w-full py-2.5 [@media(max-height:700px)]:py-2 bg-white text-purple-primary border-2 border-purple-primary rounded-xl font-semibold text-sm hover:bg-purple-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-400"
               >
                 {submitting ? 'Submitting...' : 'Notify me when ready'}
               </button>
 
               {/* Preorder CTA */}
-              <div className="relative py-4">
+              <div className="relative py-4 [@media(max-height:700px)]:py-1">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-gray-300"></div>
                 </div>
@@ -303,18 +303,18 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                 </div>
               </div>
 
-              <div className="bg-purple-50 rounded-xl p-4">
-                <p className="text-xs text-gray-600 text-center mb-2">
+              <div className="bg-purple-50 rounded-xl p-4 [@media(max-height:700px)]:p-3">
+                <p className="text-xs text-gray-600 text-center mb-2 [@media(max-height:700px)]:mb-1">
                   Lock in the $30 discount and help us prioritize your laptop.
                 </p>
                 <a
                   href="#preorder"
                   onClick={onClose}
-                  className="block w-full py-2.5 bg-purple-primary text-white rounded-lg font-semibold hover:bg-purple-dark transition-all text-center text-sm"
+                  className="block w-full py-2.5 [@media(max-height:700px)]:py-2 bg-purple-primary text-white rounded-lg font-semibold hover:bg-purple-dark transition-all text-center text-sm"
                 >
                   Pre-order for $50
                 </a>
-                <p className="text-xs text-gray-600 text-center mt-2">
+                <p className="text-xs text-gray-600 text-center mt-2 [@media(max-height:700px)]:mt-1">
                   Full refund if not supported or you change your mind.
                 </p>
               </div>
