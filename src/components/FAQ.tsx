@@ -34,6 +34,11 @@ const faqs: { question: string; answer: ReactNode }[] = [
       "Updates are optional because the core experience is simple, stable, and offline. If you'd like to update the software, you can download an update to a USB drive and plug it in, or choose to get a new one mailed.",
   },
   {
+    question: 'Where do you ship?',
+    answer:
+      "We ship anywhere in the US, including Alaska and Hawaii.",
+  },
+  {
     question: "What's the refund policy?",
     answer: (
       <>
