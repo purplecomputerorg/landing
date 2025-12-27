@@ -1,28 +1,32 @@
 #!/bin/bash
 
-# Generate favicon.ico from the mascot SVG
-# Requires: rsvg-convert (from librsvg) and png-to-ico (npm)
+# Generate favicon.ico and apple-touch-icon from the mascot SVG
+# Requires: rsvg-convert (from librsvg) and png2icons (npm)
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PUBLIC_DIR="$SCRIPT_DIR/../public"
-SOURCE_SVG="$PUBLIC_DIR/bot-2-purple.svg"
-OUTPUT_ICO="$PUBLIC_DIR/favicon.ico"
+SOURCE_SVG="$PUBLIC_DIR/favicon.svg"
 
 cd "$PUBLIC_DIR"
 
-echo "Generating favicon from $SOURCE_SVG..."
+echo "Generating favicons from $SOURCE_SVG..."
 
-# Create PNGs at standard favicon sizes
-rsvg-convert -w 16 -h 16 "$SOURCE_SVG" -o favicon-16.png
-rsvg-convert -w 32 -h 32 "$SOURCE_SVG" -o favicon-32.png
-rsvg-convert -w 48 -h 48 "$SOURCE_SVG" -o favicon-48.png
+# Create high-res PNG for ico generation
+rsvg-convert -w 512 -h 512 "$SOURCE_SVG" -o icon-512.png
 
-# Combine into ICO
-npx --yes png-to-ico favicon-16.png favicon-32.png favicon-48.png > "$OUTPUT_ICO"
+# Generate multi-size ICO from the 512px source (includes 256, 128, 96, 72, 64, 48, 32, 24, 16)
+npx --yes png2icons icon-512.png favicon -icop
 
-# Clean up temporary PNGs
-rm -f favicon-16.png favicon-32.png favicon-48.png
+# Create apple-touch-icon (180x180) for iOS and social sharing (WhatsApp, etc.)
+rsvg-convert -w 180 -h 180 "$SOURCE_SVG" -o apple-touch-icon.png
 
-echo "Created $OUTPUT_ICO"
+# Create icon for Android/Chrome (192x192)
+rsvg-convert -w 192 -h 192 "$SOURCE_SVG" -o icon-192.png
+
+echo "Created:"
+echo "  - favicon.ico"
+echo "  - apple-touch-icon.png"
+echo "  - icon-192.png"
+echo "  - icon-512.png"
