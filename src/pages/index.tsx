@@ -32,15 +32,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Purple Computer - A calm creativity computer for kids</title>
+        <title>Purple Computer - Give them a first computer you can feel good about</title>
         <meta
           name="description"
-          content="Transform your old laptop into a calm, distraction-free creativity computer for kids ages 3-8. No internet, no ads, no apps to manage."
+          content="Transform your old laptop into a distraction-free space for kids ages 3-8 to explore, create, and play."
         />
         <meta property="og:title" content="Purple Computer" />
         <meta
           property="og:description"
-          content="A calm creativity computer they can call their own"
+          content="Give them a first computer you can feel good about"
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
