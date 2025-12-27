@@ -278,7 +278,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
               <button
                 type="submit"
                 disabled={submitting || !isFormValid}
-                className="w-full py-2.5 bg-gray-100 text-gray-700 rounded-xl font-medium text-sm hover:bg-gray-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-2.5 bg-white text-purple-primary border-2 border-purple-primary rounded-xl font-semibold text-sm hover:bg-purple-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-400"
               >
                 {submitting ? 'Submitting...' : 'Notify me when ready'}
               </button>
@@ -302,7 +302,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   Pre-order for $50
                 </a>
                 <p className="text-xs text-gray-600 text-center mt-2">
-                  Lock in the price. Full refund if not supported or you change your mind.
+                  Lock in the $30 discount. Full refund if not supported or you change your mind.
                 </p>
               </div>
             </form>

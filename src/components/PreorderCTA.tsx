@@ -52,10 +52,16 @@ export default function PreorderCTA() {
             <p className="text-purple-300 text-sm">Perfect for that laptop in the closet. Other models coming soon.</p>
           </div>
 
-          <div className="pt-6 border-t border-purple-400/30 text-purple-100">
-            <div className="flex items-center justify-center gap-3 text-left">
-              <FontAwesomeIcon icon={faShieldHeart} className="flex-shrink-0" style={{ width: '1.5rem', height: '1.5rem' }} />
-              <span><span className="font-bold text-white">Not sure if your laptop is supported?</span> Pre-order anyway. Full refund anytime, no questions asked.</span>
+          <div className="pt-6 border-t border-purple-400/30 flex justify-center">
+            <div className="text-left space-y-3">
+              <div className="flex items-center gap-2">
+                <FontAwesomeIcon icon={faShieldHeart} className="text-purple-300" style={{ width: '1.5rem', height: '1.5rem' }} />
+                <p className="text-white font-bold text-xl">Full Refund Anytime</p>
+              </div>
+              <div className="text-purple-200 space-y-1">
+                <p>No questions asked. Keep the USB, no returns needed.</p>
+                <p><span className="text-white font-medium">Not sure if your laptop is supported?</span> Pre-order anyway to lock in the $30 discount.</p>
+              </div>
             </div>
           </div>
         </div>
