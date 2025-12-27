@@ -7,11 +7,28 @@ const examples = [
   'asdf + purple',
 ];
 
-const details = [
+const ColorPill = ({ color, label }: { color: string; label: string }) => (
+  <span
+    className="inline-block px-2 py-0.5 rounded-full text-xs font-medium"
+    style={{ backgroundColor: color, color: color === '#FACC15' ? '#713F12' : 'white' }}
+  >
+    {label}
+  </span>
+);
+
+const colorMixSubtext = (
+  <span className="flex items-center justify-center gap-1">
+    <ColorPill color="#FACC15" label="yellow" /> + <ColorPill color="#3B82F6" label="blue" /> = <ColorPill color="#22C55E" label="green" />
+  </span>
+);
+
+const details: { text: string; subtext: React.ReactNode }[] = [
   { text: 'Autocomplete suggestions', subtext: 'Less typing for small fingers' },
   { text: 'No error messages', subtext: 'Everything does something' },
   { text: 'No shift key needed', subtext: 'Double-tap for symbols' },
   { text: 'Forgiving math', subtext: "Typos don't break calculations" },
+  { text: 'Colors mix like paint', subtext: colorMixSubtext },
+  { text: 'Reads words aloud', subtext: 'Hear everything you type' },
 ];
 
 export default function LittleThings() {
@@ -36,7 +53,7 @@ export default function LittleThings() {
           </span>
         ))}
       </div>
-      <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
         {details.map((detail) => (
           <div key={detail.text} className="text-center">
             <p className="text-gray-900 font-semibold mb-1">{detail.text}</p>
