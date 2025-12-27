@@ -16,7 +16,7 @@ export default function ProblemSolution() {
         </p>
         <p className="text-lg sm:text-xl text-purple-primary font-semibold mb-16 text-center -mt-10">
           <span className="text-purple-300 mr-2">↳</span>
-          Purple is designed to set it free.
+          Purple is designed to be put down.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">
@@ -61,7 +61,7 @@ export default function ProblemSolution() {
           </div>
         </div>
         <p className="text-center text-gray-500 text-sm mt-8">
-          *Promising boredom is probably a poor marketing decision, but we're running with it.
+          *Our marketing advisor quit after reading this. But we'd rather kids get bored than hooked.
         </p>
     </div>
   );

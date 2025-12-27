@@ -19,6 +19,11 @@ const faqs: { question: string; answer: ReactNode }[] = [
       "Purple Computer runs on most laptops. We're rolling out support in waves, starting with Intel Macs from 2013-2018 in April 2026. Use the \"Check my laptop\" button to see where your model sits in the rollout and get notified when it's ready.",
   },
   {
+    question: 'Why old laptops?',
+    answer:
+      "You probably have one in a drawer already. They're free, sturdy enough for kids, and if something happens to it, no big deal. A real keyboard is great for learning to read and write, and one less device in a landfill.",
+  },
+  {
     question: 'Can I undo it and restore the laptop?',
     answer:
       "Yes, you can always reinstall macOS or Windows later. Purple should be installed on a laptop that's not being used for anything else. Before installing, you'll be able to test that Purple works on your laptop without erasing anything.",
