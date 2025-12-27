@@ -23,7 +23,7 @@ const colorMixSubtext = (
 );
 
 const details: { text: string; subtext: React.ReactNode }[] = [
-  { text: 'Suggestions autocomplete', subtext: 'Less typing for small fingers' },
+  { text: 'Autocomplete', subtext: 'Less typing for small fingers' },
   { text: 'No error messages', subtext: 'Everything does something' },
   { text: 'No shift key needed', subtext: 'Double-tap for symbols' },
   { text: 'Forgiving math', subtext: "Typos don't break calculations" },
