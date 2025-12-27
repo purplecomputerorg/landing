@@ -294,6 +294,9 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
               </div>
 
               <div className="bg-purple-50 rounded-xl p-4">
+                <p className="text-xs text-gray-600 text-center mb-2">
+                  Lock in the $30 discount and help us prioritize your laptop.
+                </p>
                 <a
                   href="#preorder"
                   onClick={onClose}
@@ -302,7 +305,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                   Pre-order for $50
                 </a>
                 <p className="text-xs text-gray-600 text-center mt-2">
-                  Lock in the $30 discount. Full refund if not supported or you change your mind.
+                  Full refund if not supported or you change your mind.
                 </p>
               </div>
             </form>
@@ -326,7 +329,7 @@ export default function ReadinessModal({ isOpen, onClose }: ReadinessModalProps)
                 Want to lock in the $50 price?
               </p>
               <p className="text-gray-500 text-xs mb-3">
-                Full refund if your laptop isn't supported, or if you change your mind.
+                Your preorder helps us prioritize which laptops to support. Full refund if yours isn't supported or you change your mind.
               </p>
               <a
                 href="#preorder"
