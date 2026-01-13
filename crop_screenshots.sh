@@ -18,7 +18,7 @@ HEIGHT = 2068 - TOP - BOTTOM
 
 print(f"Cropping to {WIDTH}x{HEIGHT} starting at ({LEFT}, {TOP})")
 
-images = ['ask_screenshot.png', 'play_screenshot.png', 'write_screenshot.png']
+images = ['explore_screenshot.png', 'play_screenshot.png', 'doodle_screenshot.png']
 public_dir = 'public'
 
 for img_name in images:

@@ -8,9 +8,9 @@ import ScreenshotModal from './ScreenshotModal';
 const features = [
   {
     icon: faCommentDots,
-    title: 'Ask',
+    title: 'Explore',
     description: 'Type a word, see an emoji, hear it spoken. Mix colors. Do math. Unlimited combinations to explore.',
-    screenshot: '/ask_screenshot_cropped.png',
+    screenshot: '/explore_screenshot_cropped.png',
     bgSize: '200%',
     bgPosition: '15% 65%', // Left side, showing the text and emojis
   },
@@ -24,11 +24,11 @@ const features = [
   },
   {
     icon: faFileLines,
-    title: 'Write',
-    description: 'No distractions, just words. Colors shift as you type.',
-    screenshot: '/write_screenshot_cropped.png',
+    title: 'Doodle',
+    description: 'No distractions, just doodling. Colors shift as you type.',
+    screenshot: '/doodle_screenshot_cropped.png',
     bgSize: '220%',
-    bgPosition: '15% 0%', // Upper left, showing the text
+    bgPosition: '15% 0%', // Upper left, showing the drawing
   },
 ];
 
